@@ -14,6 +14,9 @@ import type {
   FilterApi,
   FunctionReference,
 } from "convex/server";
+import type * as contents_users_create from "../contents/users/create";
+import type * as contents_users_find from "../contents/users/find";
+import type * as contents_users_index from "../contents/users/index";
 import type * as http from "../http";
 
 /**
@@ -25,6 +28,9 @@ import type * as http from "../http";
  * ```
  */
 declare const fullApi: ApiFromModules<{
+  "contents/users/create": typeof contents_users_create;
+  "contents/users/find": typeof contents_users_find;
+  "contents/users/index": typeof contents_users_index;
   http: typeof http;
 }>;
 export declare const api: FilterApi<
