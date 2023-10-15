@@ -9,6 +9,8 @@ const Home: Page = () => {
 
   const router = useRouter();
 
+  console.log("hello world")
+
   return (
     <div className="grid h-screen items-center">
       {isAuthenticated ? (
