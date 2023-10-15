@@ -12,7 +12,7 @@ const Portal: Page = () => {
     <div className="grid h-screen items-center">
       <div className="mx-auto max-w-xs">
         <User
-          name={user?.fullName}
+          name="Hello"
           avatarProps={{
             src: user?.imageUrl,
           }}

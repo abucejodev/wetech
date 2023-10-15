@@ -1,8 +1,9 @@
-import { mutation, query } from "../../_generated/server";
+import { query } from "../../_generated/server";
 
-export const single = mutation({
+export const single = query({
   args: {},
-  handler: async ({ db, auth }, {}) => {
-    console.log("User");
+  handler: async ({ db }) => {
+    const user = await db.query("users").collect();
+    return user;
   },
 });

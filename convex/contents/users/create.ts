@@ -15,13 +15,7 @@ export const single = mutation({
       )
       .unique();
 
-    // ? !!!
-    // if (user) {
-    //   if (user.name !== identity.name) {
-    //     await db.patch(user._id, { name: identity.name });
-    //   }
-    //   return user._id;
-    // }
+    if (user) return user._id;
 
     return await db.insert("users", {
       name: identity.name ?? "--",
