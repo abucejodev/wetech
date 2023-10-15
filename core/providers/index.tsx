@@ -3,7 +3,7 @@ import DesignProvider from "./design";
 
 type Props = { children: React.ReactNode };
 
-const Poviders = ({ children }: Props) => {
+const Poviders = async ({ children }: Props) => {
   return (
     <ConvexProvider>
       <DesignProvider>{children}</DesignProvider>
